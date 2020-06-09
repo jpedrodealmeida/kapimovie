@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-details',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
   ngOnInit(): void {
+    this._router.navigate(['/movie'])
   }
 
 }
