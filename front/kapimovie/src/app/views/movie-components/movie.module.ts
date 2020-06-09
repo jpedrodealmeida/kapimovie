@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MovieListAllComponent } from './movie-list-all/movie-list-all.component';
 import { MovieListFavoriteComponent } from './movie-list-favorite/movie-list-favorite.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { MovieTopBarComponent } from './movie-top-bar/movie-top-bar.component';
 
 
 
@@ -10,7 +11,8 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
   declarations: [
     MovieListAllComponent,
     MovieListFavoriteComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    MovieTopBarComponent
   ],
   imports: [
     CommonModule
