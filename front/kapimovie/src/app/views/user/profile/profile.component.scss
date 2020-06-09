@@ -1,0 +1,34 @@
+.top-area{
+    margin-bottom: 127px;
+}
+.text-movie{
+    color: #55b25f;
+    font-size: 28px;
+    margin: 0;
+}
+.image-link{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 8px;
+    .text-grid{
+        align-self: center;
+    }
+}
+.content{
+    text-align: right;
+    .content-text{
+        align-items: center;
+        font-size: 28px;
+        color: #637463;
+        span{
+            font-weight: bold;
+        }
+    }
+}
+
+.profile-structure{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 98px;
+
+}
