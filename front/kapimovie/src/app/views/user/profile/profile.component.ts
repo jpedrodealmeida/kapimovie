@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _toastrService: ToastrService) { }
 
   ngOnInit(): void {
+    
+  }
+
+  public info(){
+    this._toastrService.info('Hello World')
   }
 
 }
