@@ -178,6 +178,13 @@ export class MovieListAllComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.movieList.map(movie =>{
+      movie['isFavorite'] = false
+    })
+  }
+
+  public favoriteMovie(movieFavorite){
+    this.movieList[movieFavorite.index]['isFavorite'] = movieFavorite.isFavorite
   }
 
 }

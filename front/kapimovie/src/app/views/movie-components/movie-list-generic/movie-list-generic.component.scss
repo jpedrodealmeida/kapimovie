@@ -9,4 +9,17 @@
     height: 20vw;
     min-height: 254px;
     background-color: transparent;
+    position: relative;
+    
+    .fa-heart{
+        cursor: pointer;
+        text-shadow: 0 0 6px #0000004D;
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        color: #FCFCFC;
+        font-size: 18px;
+    }
+    
+
 }

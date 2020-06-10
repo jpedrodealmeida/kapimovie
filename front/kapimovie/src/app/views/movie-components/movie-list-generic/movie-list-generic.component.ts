@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-movie-list-generic',
@@ -9,9 +9,19 @@ export class MovieListGenericComponent implements OnInit {
 
   @Input('movieList') movies
 
+  @Output() like = new EventEmitter()
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public emitLikeMovie(isFavorite, index){
+    let favoriteObj = {
+      isFavorite: !isFavorite,
+      index: index
+    }
+    this.like.emit(favoriteObj)
   }
 
 }
