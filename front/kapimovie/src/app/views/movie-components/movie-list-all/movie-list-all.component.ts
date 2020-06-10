@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-movie-list-all',
@@ -175,7 +176,7 @@ export class MovieListAllComponent implements OnInit {
       "poster": "https://m.media-amazon.com/images/M/MV5BMTAwNDEyODU1MjheQTJeQWpwZ15BbWU2MDc3NDQwNw@@._V1_.jpg"
     }
   ]
-  constructor() { }
+  constructor(private _toastrService: ToastrService) { }
 
   ngOnInit(): void {
     this.movieList.map(movie =>{
@@ -185,6 +186,7 @@ export class MovieListAllComponent implements OnInit {
 
   public favoriteMovie(movieFavorite){
     this.movieList[movieFavorite.index]['isFavorite'] = movieFavorite.isFavorite
+    this._toastrService.success('Favorite list updated')
   }
 
 }
