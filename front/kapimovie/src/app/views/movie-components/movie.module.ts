@@ -5,6 +5,7 @@ import { MovieListFavoriteComponent } from './movie-list-favorite/movie-list-fav
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MovieTopBarComponent } from './movie-top-bar/movie-top-bar.component';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MovieListGenericComponent } from './movie-list-generic/movie-list-generic.component';
 
 
 
@@ -14,7 +15,8 @@ import { MovieSearchComponent } from './movie-search/movie-search.component';
     MovieListFavoriteComponent,
     MovieDetailsComponent,
     MovieTopBarComponent,
-    MovieSearchComponent
+    MovieSearchComponent,
+    MovieListGenericComponent
   ],
   imports: [
     CommonModule

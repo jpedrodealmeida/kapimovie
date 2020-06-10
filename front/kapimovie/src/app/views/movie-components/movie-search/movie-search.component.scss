@@ -64,8 +64,7 @@ $gray: #A0AFA0;
 
 .search-structure{
     display: grid;
-    grid-template-columns: 87% 10%;
-    grid-gap: 2%;
+    grid-template-columns: 94% 6%;
     .fas{
         margin-right: 10px;
     }
@@ -73,6 +72,7 @@ $gray: #A0AFA0;
 
 .screen-name{
     align-self: center;
+    text-align: end;
     color: #A0AFA0;
     font-size: 18px;
 }
