@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-top-bar',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieTopBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  public goToProfile(){
+    this._router.navigate(['/profile'])
   }
 
 }

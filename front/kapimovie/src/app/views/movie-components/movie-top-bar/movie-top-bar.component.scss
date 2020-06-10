@@ -1,0 +1,25 @@
+.top-area{
+    margin-bottom: 127px;
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+.user-icon{
+    font-size: 47px;
+    color: #A0AFA0;
+    .fas{
+        cursor: pointer;
+    }
+}
+.text-movie{
+    color: #55b25f;
+    font-size: 28px;
+    margin: 0;
+}
+.image-link{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 8px;
+    .text-grid{
+        align-self: center;
+    }
+}
