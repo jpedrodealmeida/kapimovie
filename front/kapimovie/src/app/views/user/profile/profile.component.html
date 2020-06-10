@@ -14,32 +14,30 @@
         </p>
     </div>
     <div class="profile-form">
-        <form>
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlSelect2">Example multiple select</label>
-              <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-            <button type="button" class="btn btn-primary">Save</button>
-          </form>
+      <form>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+          <label for="name" class="form__label">Name</label>
+        </div>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Age" name="age" id='age' required />
+          <label for="age" class="form__label">Age</label>
+        </div>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Favorite movie" name="movie" id='movie' required />
+          <label for="movie" class="form__label">Favorite movie</label>
+        </div>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Favorite genre" name="genre" id='genre' required />
+          <label for="genre" class="form__label">Favorite genre</label>
+        </div>
+        <div class="button-structure">
+          <div class="buttons">
+            <button type="button" class="btn btn-link btn-cancel">Cancel</button>
+            <button type="button" class="btn btn-primary btn-save">Save profile</button>
+          </div>
+        </div>
+        
+      </form>
     </div>
 </div>
