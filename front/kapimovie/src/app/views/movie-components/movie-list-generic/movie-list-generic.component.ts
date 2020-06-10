@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-movie-list-generic',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-list-generic.component.scss']
 })
 export class MovieListGenericComponent implements OnInit {
+
+  @Input('movieList') movies
 
   constructor() { }
 

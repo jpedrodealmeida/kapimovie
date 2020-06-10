@@ -1,5 +1,5 @@
 <div class="list-generic-structure">
-    <div class="movie-card">
-        
+    <div class="movie-card" *ngFor="let movie of movies">
+        <img [src]="movie.poster" width="100%">
     </div>
 </div>
