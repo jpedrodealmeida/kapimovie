@@ -40,6 +40,7 @@
         display: grid;
         grid-auto-flow: column;
         justify-content: end;
+        grid-gap: 6px;
         .btn-save{
             color: #FCFCFC;
             background-color: #3CC896;
