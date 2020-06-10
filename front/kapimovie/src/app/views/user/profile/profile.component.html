@@ -28,7 +28,12 @@
           <label for="movie" class="form__label">Favorite movie</label>
         </div>
         <div class="form__group field">
-          <input type="input" class="form__field" placeholder="Favorite genre" name="genre" id='genre' required />
+          <select class="form__field" id="genre" name='genre' required>
+            <option selected>Horror</option>
+            <option value="1">Action</option>
+            <option value="2">Drama</option>
+            <option value="3">Romance</option>
+          </select>
           <label for="genre" class="form__label">Favorite genre</label>
         </div>
         <div class="button-structure">
