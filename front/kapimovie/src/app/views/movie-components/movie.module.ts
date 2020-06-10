@@ -4,6 +4,7 @@ import { MovieListAllComponent } from './movie-list-all/movie-list-all.component
 import { MovieListFavoriteComponent } from './movie-list-favorite/movie-list-favorite.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MovieTopBarComponent } from './movie-top-bar/movie-top-bar.component';
+import { MovieSearchComponent } from './movie-search/movie-search.component';
 
 
 
@@ -12,7 +13,8 @@ import { MovieTopBarComponent } from './movie-top-bar/movie-top-bar.component';
     MovieListAllComponent,
     MovieListFavoriteComponent,
     MovieDetailsComponent,
-    MovieTopBarComponent
+    MovieTopBarComponent,
+    MovieSearchComponent
   ],
   imports: [
     CommonModule

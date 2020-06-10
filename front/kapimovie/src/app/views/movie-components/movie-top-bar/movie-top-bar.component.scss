@@ -1,5 +1,5 @@
 .top-area{
-    margin-bottom: 127px;
+    margin-bottom: 74px;
     display: grid;
     grid-template-columns: 90% 10%;
 }
@@ -19,6 +19,7 @@
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-gap: 8px;
+    align-items: center;
     .text-grid{
         align-self: center;
     }
