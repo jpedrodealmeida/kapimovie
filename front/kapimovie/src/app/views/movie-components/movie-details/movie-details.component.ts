@@ -13,6 +13,8 @@ import { MovieService } from '../../../../app/services/movie.service';
 export class MovieDetailsComponent implements OnInit {
 
   public selectedMovie
+  public actorList = []
+  public genreList = []
 
   constructor(
     private _location: Location,
@@ -33,6 +35,12 @@ export class MovieDetailsComponent implements OnInit {
       let stringMovie = JSON.stringify(this.selectedMovie)
       localStorage.setItem('movie', stringMovie)
     }
+    this.createListsForShow()
+  }
+
+  private createListsForShow(){
+    this.actorList = this.getListFromString(this.selectedMovie['actors'])
+    this.genreList = this.getListFromString(this.selectedMovie['genre'])
   }
 
   private getMovieFromLocalStorage(){
@@ -42,6 +50,11 @@ export class MovieDetailsComponent implements OnInit {
 
   public goToBackPage(){
     this._location.back()
+  }
+
+  public getListFromString(content: string){
+    let list = content.split(',');
+    return list
   }
 
 }

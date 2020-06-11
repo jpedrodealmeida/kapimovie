@@ -4,14 +4,26 @@
 </div>
 <div class="movie-details-structure">
     <div class="info-structure">
-        <h2>{{selectedMovie?.title}}</h2>
+        <span class="title">{{selectedMovie?.title}}</span>
         <div class="info">
-            {{selectedMovie?.year}}
-            <br>
-            {{selectedMovie?.runtime}}
+            <div class="year">
+                <i class="far fa-calendar"></i>
+                {{selectedMovie?.year}}
+            </div>
+            <div class="runtime">
+                <i class="far fa-clock"></i>
+                {{selectedMovie?.runtime}}
+            </div>
+            <p>
+            <span>{{selectedMovie.rated}}  </span>
+        </p>
+                
         </div>
         <div class="like-button">
-            Add to favorites
+            <div class="heart-box">
+                <i class="fa-heart fas liked"></i>
+            </div>
+            <span class="text">Add to favorites</span>
         </div>
         <div class="description">
             <p>
@@ -19,11 +31,24 @@
             </p>
         </div>
         <div class="more-info">
-            {{selectedMovie?.genre}}
-            <br>
-            {{selectedMovie?.actors}}
-            <br>
-            {{selectedMovie?.director}}
+            <div class="info-details">
+                <label>Cast</label>
+                <div *ngFor="let actor of actorList">
+                    {{actor}}
+                </div>    
+            </div>
+            <div class="info-details">
+                <label>Genre</label>
+                <div *ngFor="let genre of genreList">
+                    {{genre}}
+                </div>
+            </div>
+            <div class="info-details">
+                <label>Director</label>
+                <div>
+                    {{selectedMovie?.director}}
+                </div>
+            </div>
         </div>
     </div>
     <div class="image-structure">

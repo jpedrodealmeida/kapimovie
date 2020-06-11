@@ -1,6 +1,7 @@
 .return-button{
     color: #A0AFA0;
     font-size: 22px;
+    margin-bottom: 23px;
     cursor: pointer;
     .fa-arrow-left{
         padding-right: 8px;
@@ -9,7 +10,7 @@
 
 .movie-details-structure{
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
     .info-structure{
         display: grid;
         grid-auto-flow: row;
@@ -17,5 +18,78 @@
 }
 
 .image-structure{
-    max-width: 444px;
+    text-align: end;
+    img{
+        border-radius: 6px;
+        max-width: 444px;
+    }
+}
+
+.title{
+    font-size: 72px;
+    color: #414641;
+    font-weight: bold;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    font-size: 26px;
+    color: #414641;
+    font-weight: 500;
+    i{
+        color: #637463;
+    }
+    span{
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        background-color: #EB4B3C;
+        border: 2px solid #EB4B3C;
+        border-width: 6px 14px 6px 14px;
+        border-radius: 5px;
+        height: 40px;
+    }
+}
+
+.like-button{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    .heart-box{
+        border: 3px solid #EB4B3C;
+        border-radius: 5px;
+        text-align: center;
+        width: 42px;
+        height: 42px;
+        display: inherit;
+        align-items: center;
+        .fa-heart{
+            color: #EB4B3C;
+            font-size: 27px;
+        }
+    }
+    .text{
+        font-size: 28px;
+        color: #637463;
+        font-weight: 600;
+    }
+}
+.description{
+    max-width: 600px;
+    color: #637463;
+    p{
+        font-size: 28px;
+    }
+}
+.more-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .info-details{
+        color: #414641;
+        font-size: 18px;
+    }
+    label{
+        color: #637463;
+        font-size: 20px;
+    }
 }
