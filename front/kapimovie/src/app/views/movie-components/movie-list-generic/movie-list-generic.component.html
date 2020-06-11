@@ -1,6 +1,6 @@
 <div class="list-generic-structure">
     <div class="movie-card" *ngFor="let movie of movies; let i = index;">
-        <i class="fa-heart" (click)='emitLikeMovie(movie?.isFavorite, i)'
+        <i class="fa-heart" (click)='emitLikeMovie(movie?.isFavorite, i, movie?.id)'
         [ngClass]="{'fas': movie.isFavorite,'far': !movie.isFavorite }"></i>
         <img [src]="movie.poster" width="100%">
     </div>

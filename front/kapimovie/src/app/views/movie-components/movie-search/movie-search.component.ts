@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-search',
@@ -7,13 +8,22 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MovieSearchComponent implements OnInit {
 
-  @Input('screenName') screenName = 'List all'
+  @Input('buttonName') buttonName = 'Favorites'
 
   public placeHolder = 'Search movies, actors or genre'
 
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  public goToPage(){
+    if(this.buttonName == 'Favorites')
+      this._router.navigate(['/movies-liked'])
+    else if(this.buttonName == 'List all')
+      this._router.navigate(['/movies'])
   }
 
 }

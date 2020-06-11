@@ -16,10 +16,11 @@ export class MovieListGenericComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public emitLikeMovie(isFavorite, index){
+  public emitLikeMovie(isFavorite, index, id){
     let favoriteObj = {
       isFavorite: !isFavorite,
-      index: index
+      index: index,
+      id: id
     }
     this.like.emit(favoriteObj)
   }

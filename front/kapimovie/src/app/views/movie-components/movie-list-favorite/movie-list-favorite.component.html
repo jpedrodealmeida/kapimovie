@@ -1,7 +1,7 @@
 <app-movie-top-bar></app-movie-top-bar>
 <div class="list-all-structure">
     <div class="search-input">
-        <app-movie-search screenName='Favorites'></app-movie-search>
+        <app-movie-search buttonName='List all'></app-movie-search>
     </div>
     
     <app-movie-list-generic [movieList]='favoriteList' (like)='removeMovieFromFavoriteList($event)'></app-movie-list-generic>
