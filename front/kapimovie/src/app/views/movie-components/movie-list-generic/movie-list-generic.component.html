@@ -1,5 +1,6 @@
 <div class="list-generic-structure">
     <div class="movie-card container" *ngFor="let movie of movies; let i = index;">
+        <i class="fa-heart fas liked" *ngIf="movie?.isFavorite"></i>
         <img [src]="movie.poster" class="image" width="100%" height="600">
         <div class="middle">
             <i class="fa-heart" (click)='emitLikeMovie(movie?.isFavorite, i, movie?.id)'
