@@ -12,7 +12,7 @@ import { MovieService } from '../../../../app/services/movie.service';
 })
 export class MovieDetailsComponent implements OnInit {
 
-  public selectecMovie
+  public selectedMovie
 
   constructor(
     private _location: Location,
@@ -26,7 +26,18 @@ export class MovieDetailsComponent implements OnInit {
   }
 
   private getMovieDetails(){
-    this.selectecMovie = this._movieService.getSelectedMovie()
+    this.selectedMovie = this._movieService.getSelectedMovie()
+    if(this.selectedMovie == undefined)
+      this.getMovieFromLocalStorage()
+    else{
+      let stringMovie = JSON.stringify(this.selectedMovie)
+      localStorage.setItem('movie', stringMovie)
+    }
+  }
+
+  private getMovieFromLocalStorage(){
+    let objectMovie = JSON.parse(localStorage.getItem('movie'))
+    this.selectedMovie = objectMovie
   }
 
   public goToBackPage(){

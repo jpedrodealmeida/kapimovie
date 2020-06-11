@@ -2,3 +2,31 @@
 <div class="return-button" (click)='goToBackPage()'>
     <span><i class="fas fa-arrow-left"></i> Return</span>
 </div>
+<div class="movie-details-structure">
+    <div class="info-structure">
+        <h2>{{selectedMovie?.title}}</h2>
+        <div class="info">
+            {{selectedMovie?.year}}
+            <br>
+            {{selectedMovie?.runtime}}
+        </div>
+        <div class="like-button">
+            Add to favorites
+        </div>
+        <div class="description">
+            <p>
+                {{selectedMovie?.plot}}
+            </p>
+        </div>
+        <div class="more-info">
+            {{selectedMovie?.genre}}
+            <br>
+            {{selectedMovie?.actors}}
+            <br>
+            {{selectedMovie?.director}}
+        </div>
+    </div>
+    <div class="image-structure">
+        <img [src]='selectedMovie.poster' width="100%">
+    </div>
+</div>

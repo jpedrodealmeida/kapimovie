@@ -6,3 +6,16 @@
         padding-right: 8px;
     }
 }
+
+.movie-details-structure{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    .info-structure{
+        display: grid;
+        grid-auto-flow: row;
+    }
+}
+
+.image-structure{
+    max-width: 444px;
+}
