@@ -46,6 +46,7 @@ export class MovieDetailsComponent implements OnInit {
   private getMovieFromLocalStorage(){
     let objectMovie = JSON.parse(localStorage.getItem('movie'))
     this.selectedMovie = objectMovie
+    this.selectedMovie['isFavorite'] = false
   }
 
   public goToBackPage(){
@@ -58,7 +59,10 @@ export class MovieDetailsComponent implements OnInit {
   }
 
   public favoriteMovie(){
-    this._movieService.setFavoriteList(this.selectedMovie)
+    if(this.selectedMovie['isFavorite'])
+      this._movieService.removeFavoriteFromList(this.selectedMovie['id'])
+    else
+      this._movieService.setFavoriteList(this.selectedMovie)
     this._toastrService.success('Favorite list updated')
   }
 

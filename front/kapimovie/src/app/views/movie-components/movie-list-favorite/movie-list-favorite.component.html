@@ -4,5 +4,6 @@
         <app-movie-search buttonName='List all'></app-movie-search>
     </div>
     
-    <app-movie-list-generic [movieList]='favoriteList' (like)='removeMovieFromFavoriteList($event)'></app-movie-list-generic>
+    <app-movie-list-generic [movieList]='favoriteList' (moveDetails)='goToDetails($event)'
+     (like)='removeMovieFromFavoriteList($event)'></app-movie-list-generic>
 </div>

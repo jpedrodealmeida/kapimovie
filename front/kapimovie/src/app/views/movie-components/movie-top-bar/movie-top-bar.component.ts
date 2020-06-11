@@ -17,4 +17,6 @@ export class MovieTopBarComponent implements OnInit {
     this._router.navigate(['/profile'])
   }
 
+
+
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -8,7 +9,10 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private _toastrService: ToastrService) { }
+  constructor(
+    private _toastrService: ToastrService,
+    private _router: Router
+    ) { }
 
   ngOnInit(): void {
     
@@ -16,6 +20,10 @@ export class ProfileComponent implements OnInit {
 
   public info(){
     this._toastrService.info('Hello World')
+  }
+
+  public goToAllMovies(){
+    this._router.navigate(['/movies'])
   }
 
 }
