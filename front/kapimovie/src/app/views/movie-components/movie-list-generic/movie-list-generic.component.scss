@@ -6,20 +6,66 @@
 .movie-card{
     width: 100%;
     min-width: 171px;
-    height: 20vw;
-    min-height: 254px;
+    // height: 20vw;
+    // min-height: 250px;
     background-color: transparent;
     position: relative;
-    
     .fa-heart{
-        cursor: pointer;
         text-shadow: 0 0 6px #0000004D;
         position: absolute;
         right: 12px;
         top: 12px;
         color: #FCFCFC;
         font-size: 18px;
+        transition: .5s ease;
+        opacity: 1;
     }
-    
-
 }
+
+//Hover image
+.container {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    width: 100%;
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    
+  }
+  
+  .container:hover .image {
+    opacity: 0.3;
+    
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    max-width: 230px;
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    p{
+        font-size: 12px;
+    }
+  }
+
+  //Finish hover image

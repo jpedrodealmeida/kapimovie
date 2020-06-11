@@ -1,7 +1,13 @@
 <div class="list-generic-structure">
-    <div class="movie-card" *ngFor="let movie of movies; let i = index;">
-        <i class="fa-heart" (click)='emitLikeMovie(movie?.isFavorite, i, movie?.id)'
-        [ngClass]="{'fas': movie.isFavorite,'far': !movie.isFavorite }"></i>
-        <img [src]="movie.poster" width="100%">
+    <div class="movie-card container" *ngFor="let movie of movies; let i = index;">
+        <img [src]="movie.poster" class="image" width="100%" height="600">
+        <div class="middle">
+            <i class="fa-heart" (click)='emitLikeMovie(movie?.isFavorite, i, movie?.id)'
+            [ngClass]="{'fas': movie.isFavorite,'far': !movie.isFavorite }"></i>
+            <div class="text">
+                {{movie.title}}
+                <p>{{movie.year}}</p>
+            </div>
+        </div>
     </div>
 </div>
