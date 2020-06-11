@@ -57,4 +57,13 @@ export class MovieDetailsComponent implements OnInit {
     return list
   }
 
+  public favoriteMovie(){
+    this._movieService.setFavoriteList(this.selectedMovie)
+    this._toastrService.success('Favorite list updated')
+  }
+
+  public getTextFavoriteButton(isFavorite): string{
+    return isFavorite ? 'Remove from favorites' : 'Add to favorites'
+  }
+
 }

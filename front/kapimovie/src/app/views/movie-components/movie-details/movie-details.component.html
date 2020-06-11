@@ -19,11 +19,11 @@
         </p>
                 
         </div>
-        <div class="like-button">
+        <div class="like-button" (click)="favoriteMovie()">
             <div class="heart-box">
                 <i class="fa-heart fas liked"></i>
             </div>
-            <span class="text">Add to favorites</span>
+            <span class="text">{{getTextFavoriteButton(selectedMovie.isFavorite)}}</span>
         </div>
         <div class="description">
             <p>

@@ -219,6 +219,7 @@ export class MovieService {
   }
 
   public setFavoriteList(movie){
+    movie['isFavorite'] = true
     this._favoriteList.push(movie)
   }
 

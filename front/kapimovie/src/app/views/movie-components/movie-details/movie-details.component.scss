@@ -54,7 +54,7 @@
 
 .like-button{
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10% 40%;
     .heart-box{
         border: 3px solid #EB4B3C;
         border-radius: 5px;
@@ -63,12 +63,14 @@
         height: 42px;
         display: inherit;
         align-items: center;
+        cursor: pointer;
         .fa-heart{
             color: #EB4B3C;
             font-size: 27px;
         }
     }
     .text{
+        cursor: pointer;
         font-size: 28px;
         color: #637463;
         font-weight: 600;
