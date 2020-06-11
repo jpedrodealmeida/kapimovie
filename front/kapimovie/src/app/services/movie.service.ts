@@ -10,7 +10,8 @@ interface movie{
   actors: string,
   plot: string,
   poster: string,
-  isFavorite: string
+  isFavorite: string,
+  id: string
 }
 interface movieList extends Array<movie>{}
 
@@ -19,6 +20,7 @@ interface movieList extends Array<movie>{}
 })
 export class MovieService {
 
+  private _selectedMovie: movie
   private _favoriteList: movieList[] = []
   private _allMovies = [
     {
@@ -237,4 +239,11 @@ export class MovieService {
     return index
   }
 
+  public setSelectedMovie(movie: movie){
+    this._selectedMovie = movie
+  }
+
+  public getSelectedMovie(): movie{
+    return this._selectedMovie
+  }
 }

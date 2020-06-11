@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { MovieService } from '../../../../app/services/movie.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list-all',
@@ -12,6 +13,7 @@ export class MovieListAllComponent implements OnInit {
   public movieList 
   
   constructor(
+    private _router: Router,
     private _toastrService: ToastrService,
      private _movieService: MovieService ) { }
 
@@ -34,6 +36,11 @@ export class MovieListAllComponent implements OnInit {
       this._movieService.setFavoriteList(this.movieList[movie.index])
     else
       this._movieService.removeFavoriteFromList(movie.id)
+  }
+
+  public goToDetails(movie){
+    this._movieService.setSelectedMovie(movie)
+    this._router.navigate(['/movie'])
   }
 
 }

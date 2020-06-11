@@ -4,5 +4,6 @@
         <app-movie-search></app-movie-search>
     </div>
     
-    <app-movie-list-generic [movieList]='movieList' (like)='favoriteMovie($event)'></app-movie-list-generic>
+    <app-movie-list-generic  [movieList]='movieList' (moveDetails)='goToDetails($event)'
+     (like)='favoriteMovie($event)'></app-movie-list-generic>
 </div>

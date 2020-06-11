@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { MovieService } from '../../../../app/services/movie.service';
 
 @Component({
   selector: 'app-movie-details',
@@ -8,12 +10,20 @@ import { Router } from '@angular/router';
 })
 export class MovieDetailsComponent implements OnInit {
 
+  public selectecMovie
+
   constructor(
-    private _router: Router
+    private _router: Router,
+    private _toastrService: ToastrService,
+    private _movieService: MovieService
   ) { }
 
   ngOnInit(): void {
-    this._router.navigate(['/movie'])
+    this.getMovieDetails()
+  }
+
+  private getMovieDetails(){
+    this.selectecMovie = this._movieService.getSelectedMovie()
   }
 
 }
