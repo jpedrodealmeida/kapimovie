@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { PublicService } from './public.service';
 import { Observable } from 'rxjs';
+
+import { PublicService } from './public.service';
 
 interface movie{
   title: string,

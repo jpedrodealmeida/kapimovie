@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
-import { MovieService } from '../../../../app/services/movie.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
+import { MovieService } from '../../../../app/services/movie.service';
 
 @Component({
   selector: 'app-movie-list-all',
@@ -37,7 +38,6 @@ export class MovieListAllComponent implements OnInit {
   }
 
   public favoriteMovie(movieFavorite){
-    // this.movieList[movieFavorite.index]['isFavorite'] = movieFavorite.isFavorite
     this.updateList(movieFavorite)
 
     this._toastrService.success('Favorite list updated')
