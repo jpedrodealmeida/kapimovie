@@ -37,14 +37,15 @@ export class MovieListAllComponent implements OnInit {
   }
 
   public favoriteMovie(movieFavorite){
-    this.movieList[movieFavorite.index]['isFavorite'] = movieFavorite.isFavorite
+    // this.movieList[movieFavorite.index]['isFavorite'] = movieFavorite.isFavorite
     this.updateList(movieFavorite)
+
     this._toastrService.success('Favorite list updated')
   }
 
   private updateList(movie){
     if(movie.isFavorite)
-      this._movieService.setFavoriteList(this.movieList[movie.index])
+      this._movieService.setFavoriteList(movie.id)
     else
       this._movieService.removeFavoriteFromList(movie.id)
   }

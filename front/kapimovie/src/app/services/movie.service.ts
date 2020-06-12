@@ -60,8 +60,14 @@ export class MovieService {
     return this._favoriteList
   }
 
-  public setFavoriteList(movie){
-    movie['isFavorite'] = true
+  public setFavoriteList(id){
+    let indexAllMovies = this.getIndexAllMovieListById(id)
+    this._allMovies[indexAllMovies]['isFavorite'] = true
+    this.addMovieOnFavoriteList(this._allMovies[indexAllMovies])
+    
+  }
+
+  public addMovieOnFavoriteList(movie){
     this._favoriteList.push(movie)
   }
 

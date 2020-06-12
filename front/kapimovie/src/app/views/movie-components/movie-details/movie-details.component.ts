@@ -66,7 +66,7 @@ export class MovieDetailsComponent implements OnInit {
     if(this.selectedMovie['isFavorite'])
       this._movieService.removeFavoriteFromList(this.selectedMovie['id'])
     else
-      this._movieService.setFavoriteList(this.selectedMovie)
+      this._movieService.setFavoriteList(this.selectedMovie.id)
     this._toastrService.success('Favorite list updated')
   }
 
