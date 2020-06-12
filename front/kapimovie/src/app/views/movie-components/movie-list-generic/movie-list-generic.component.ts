@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list-generic',
@@ -13,8 +12,7 @@ export class MovieListGenericComponent implements OnInit {
 
   @Output() like = new EventEmitter()
   @Output() moveDetails = new EventEmitter()
-
-
+  @Output() movieNotFound = new EventEmitter()
 
   constructor() { }
 
@@ -34,5 +32,9 @@ export class MovieListGenericComponent implements OnInit {
     this.moveDetails.emit(movie)
   }
 
+  public emitMovieNonFound(result){
+    if(result !== undefined)
+      this.movieNotFound.emit(result.length)
+  }
 
 }

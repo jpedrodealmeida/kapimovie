@@ -4,12 +4,8 @@
         <app-movie-search (textSearch)="setSearchText($event)" buttonName='List all'></app-movie-search>
     </div>
     
-    <app-movie-list-generic [searchText]="searchText" [movieList]='favoriteList'
+    <app-movie-list-generic [searchText]="searchText" [movieList]='favoriteList' (movieNotFound)="movieNotFound($event)"
      (moveDetails)='goToDetails($event)' (like)='removeMovieFromFavoriteList($event)'></app-movie-list-generic>
 
-     <div *ngIf="!favoriteList.length" class="empty-state">
-         <img src='../../../../assets/img/warning-nomovie.png'>
-         <span class="empty-title">No movies found!</span>
-         <p>Reset your filters to find something.</p>
-     </div>
+     
 </div>

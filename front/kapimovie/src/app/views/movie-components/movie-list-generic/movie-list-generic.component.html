@@ -1,15 +1,24 @@
-<div class="list-generic-structure">
-    <div class="movie-card container" 
-    *ngFor="let movie of movies | filter:searchText; let i = index;">
-        <i class="fa-heart fas liked" *ngIf="movie?.isFavorite"></i>
-        <img [src]="movie.poster" class="image" width="100%" height="600" (click)='emitMoveDetails(movie)'>
-        <div class="middle">
-            <i class="fa-heart" (click)='emitLikeMovie(movie?.isFavorite, i, movie?.id)'
-            [ngClass]="{'fas': movie.isFavorite,'far': !movie.isFavorite }"></i>
-            <div class="text">
-                {{movie.title}}
-                <p>{{movie.year}}</p>
+<ng-container *ngIf="(movies | filter:searchText) as result">
+    <div class="list-generic-structure">
+
+        <div class="movie-card container" *ngFor="let movie of result; let i = index;">
+            <i class="fa-heart fas liked" *ngIf="movie?.isFavorite"></i>
+            <img [src]="movie.poster" class="image" width="100%" height="600" (click)='emitMoveDetails(movie)'>
+            <div class="middle">
+                <i class="fa-heart" (click)='emitLikeMovie(movie?.isFavorite, i, movie?.id)'
+                    [ngClass]="{'fas': movie.isFavorite,'far': !movie.isFavorite }"></i>
+                <div class="text">
+                    {{movie.title}}
+                    <p>{{movie.year}}</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <ng-container *ngIf='!result.length'>{{emitMovieNonFound(result)}}
+        <div class="empty-state">
+            <img src='../../../../assets/img/warning-nomovie.png'>
+            <span class="empty-title">No movies found!</span>
+            <p>Reset your filters to find something.</p>
+        </div>
+    </ng-container>
+</ng-container>

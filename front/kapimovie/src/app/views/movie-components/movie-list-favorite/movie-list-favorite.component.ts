@@ -12,6 +12,7 @@ export class MovieListFavoriteComponent implements OnInit {
 
   public favoriteList = []
   public searchText = ''
+  public anyMovie: number
   
   constructor(
     private _toastrService: ToastrService,
@@ -40,5 +41,9 @@ export class MovieListFavoriteComponent implements OnInit {
 
   public setSearchText(value){
     this.searchText = value
+  }
+
+  public movieNotFound(value){
+    this.anyMovie = value
   }
 }

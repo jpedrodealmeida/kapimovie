@@ -30,6 +30,23 @@
     }
 }
 
+.empty-state{
+  margin-top: 100px;
+  display: grid;
+  grid-auto-flow: row;
+  text-align: center;
+  color: #A4ADA4;
+  img{
+      justify-self: center;
+  }
+  .empty-title{
+      font-size: 22px;
+  }
+  p{
+      font-size: 18px;
+  }
+}
+
 //Hover image
 .container {
     position: relative;
