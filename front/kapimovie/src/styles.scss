@@ -3,4 +3,7 @@
 
 body{
     margin: 65px 139px;
+    @media (min-width: 320px) and (max-width: 660px) {
+        margin: 16px 16px;
+      }
 }

@@ -1,5 +1,8 @@
 .top-area{
     margin-bottom: 127px;
+    @media (min-width: 320px) and (max-width: 660px) {
+      margin-bottom: 50px;
+    }
 }
 .text-movie{
     color: #55b25f;
@@ -12,12 +15,27 @@
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-gap: 8px;
+    @media (min-width: 320px) and (max-width: 660px) {
+      grid-template-rows: 2fr 1fr;
+      grid-template-columns: auto;
+      grid-gap: 0;
+      img{
+        width: 80%;
+        justify-self: center;
+      }
+    }
     .text-grid{
         align-self: center;
+        @media (min-width: 320px) and (max-width: 660px) {
+          justify-self: center;
+        }
     }
 }
 .content{
     text-align: right;
+    @media (min-width: 320px) and (max-width: 660px) {
+      text-align: center;
+    }
     .content-text{
         align-items: center;
         font-size: 28px;
@@ -32,28 +50,44 @@
     display: grid;
     grid-auto-flow: column;
     grid-gap: 98px;
+    @media (min-width: 320px) and (max-width: 660px) {
+      grid-auto-flow: row;
+      grid-gap: 0;
+    }
 
 }
 
 .button-structure{
     text-align: end;
     margin-top: 67px;
+    @media (min-width: 320px) and (max-width: 660px) {
+      margin-top: 30px;
+    }
     .buttons{
         display: grid;
         grid-auto-flow: column;
         justify-content: end;
         grid-gap: 6px;
+        @media (min-width: 320px) and (max-width: 660px) {
+          grid-auto-flow: row;
+          justify-content: inherit;
+        }
         .btn-save{
             color: #FCFCFC;
             background-color: #3CC896;
             border: 1px solid #3CC896;
             width: 138px;
-
+            @media (min-width: 320px) and (max-width: 660px) {
+              width: 100%;
+            }
         }
         .btn-cancel{
             color: #A0AFA0;
             font-size: 18px;
             width: 138px;
+            @media (min-width: 320px) and (max-width: 660px) {
+              width: 100%;
+            }
         }
     }
 }
@@ -68,6 +102,9 @@ $gray: #A0AFA0;
   padding: 15px 0 0;
   margin-top: 10px;
   width: 276px;
+  @media (min-width: 320px) and (max-width: 660px) {
+    width: 100%;
+  }
 }
 
 .form__field {
