@@ -18,7 +18,6 @@ export class MovieDetailsComponent implements OnInit {
 
   constructor(
     private _location: Location,
-    private _router: Router,
     private _toastrService: ToastrService,
     private _movieService: MovieService
   ) { }
