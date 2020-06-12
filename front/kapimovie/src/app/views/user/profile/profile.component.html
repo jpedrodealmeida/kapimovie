@@ -14,32 +14,29 @@
         </p>
     </div>
     <div class="profile-form">
-      <form>
+      <form [formGroup]="form" name='form'>
         <div class="form__group field">
-          <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+          <input type="input" class="form__field" placeholder="Name" formControlName="name" name="name" id='name'/>
           <label for="name" class="form__label">Name</label>
         </div>
         <div class="form__group field">
-          <input type="input" class="form__field" placeholder="Age" name="age" id='age' required />
+          <input type="number" class="form__field" placeholder="Age" formControlName="age" name="age" id='age' required />
           <label for="age" class="form__label">Age</label>
         </div>
         <div class="form__group field">
-          <input type="input" class="form__field" placeholder="Favorite movie" name="movie" id='movie' required />
+          <input type="input" class="form__field" placeholder="Favorite movie" formControlName="movie" name="movie" id='movie' required />
           <label for="movie" class="form__label">Favorite movie</label>
         </div>
         <div class="form__group field">
-          <select class="form__field" id="genre" name='genre' required>
-            <option selected>Horror</option>
-            <option value="1">Action</option>
-            <option value="2">Drama</option>
-            <option value="3">Romance</option>
+          <select class="form__field" id="genre" name='genre' formControlName="genre" >
+            <option *ngFor="let genre of genreList" [value]="genre.value" selected>{{genre.name}}</option>
           </select>
           <label for="genre" class="form__label">Favorite genre</label>
         </div>
         <div class="button-structure">
           <div class="buttons">
             <button type="button" class="btn btn-link btn-cancel">Cancel</button>
-            <button type="button" class="btn btn-primary btn-save">Save profile</button>
+            <button type="button" class="btn btn-primary btn-save" (click)="saveButton()">Save profile</button>
           </div>
         </div>
         
