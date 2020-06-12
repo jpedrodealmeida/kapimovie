@@ -1,9 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import {Location} from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
 
+import { UserService } from '../../../../app/services/user/user.service';
+
+interface user{
+  name: string,
+  age: number,
+  favoriteMovie: string,
+  genre: string
+}
 
 @Component({
   selector: 'app-profile',
@@ -24,11 +32,22 @@ export class ProfileComponent implements OnInit {
   constructor(
     private _toastrService: ToastrService,
     private _router: Router,
-    private _fb: FormBuilder
+    private _fb: FormBuilder,
+    private _userService: UserService,
+    private _location: Location,
     ) { }
 
   ngOnInit(): void {
     this.createForm()
+    this.getUser()
+  }
+
+  private getUser(){
+    let user = this._userService.getUser()
+    this.form.controls['name'].patchValue(user.name)
+    this.form.controls['age'].patchValue(user.age)
+    this.form.controls['movie'].patchValue(user.favoriteMovie)
+    this.form.controls['genre'].patchValue(user.genre)
   }
 
   private createForm() {
@@ -49,22 +68,30 @@ export class ProfileComponent implements OnInit {
   }
 
   public saveButton(){
-    let user = this.createUserObject()
-    this.saveUser(user)
+    if(this.form.valid){
+      let user = this.createUserObject()
+      this.saveUser(user)
+    }else
+      this._toastrService.info('Please, check your data')
   }
 
-  private createUserObject(): object{
+  private createUserObject(): user{
     let user = {
       name: this.form.controls['name'].value,
       age: this.form.controls['age'].value,
-      movie: this.form.controls['movie'].value,
+      favoriteMovie: this.form.controls['movie'].value,
       genre: this.form.controls['genre'].value
     }
     return user
   }
 
-  private saveUser(user: object){
-    debugger
+  private saveUser(user: user){
+    this._userService.updateUser(user)
+    this._toastrService.success('User updated')
+  }
+
+  public cancelButton(){
+    this._location.back()
   }
 
 }
