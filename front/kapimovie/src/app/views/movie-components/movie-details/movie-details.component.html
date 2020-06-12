@@ -5,6 +5,9 @@
 <div class="movie-details-structure">
     <div class="info-structure">
         <span class="title">{{selectedMovie?.title}}</span>
+        <div class="image-mobile">
+            <img [src]='selectedMovie.poster' width="100%">
+        </div>
         <div class="info">
             <div class="year">
                 <i class="far fa-calendar"></i>

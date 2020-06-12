@@ -23,7 +23,12 @@ export class MovieDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.setPositionInitScroll()
     this.getMovieDetails()
+  }
+
+  private setPositionInitScroll(){
+    window.scrollTo(0, 0);
   }
 
   private getMovieDetails(){
