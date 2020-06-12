@@ -1,3 +1,19 @@
 .search-input{
     margin-bottom: 52px;
 }
+
+.empty-state{
+    display: grid;
+    grid-auto-flow: row;
+    text-align: center;
+    color: #A4ADA4;
+    img{
+        justify-self: center;
+    }
+    .empty-title{
+        font-size: 22px;
+    }
+    p{
+        font-size: 18px;
+    }
+}

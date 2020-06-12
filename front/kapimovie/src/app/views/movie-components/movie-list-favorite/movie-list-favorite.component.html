@@ -6,4 +6,10 @@
     
     <app-movie-list-generic [movieList]='favoriteList' (moveDetails)='goToDetails($event)'
      (like)='removeMovieFromFavoriteList($event)'></app-movie-list-generic>
+
+     <div *ngIf="!favoriteList.length" class="empty-state">
+         <img src='../../../../assets/img/warning-nomovie.png'>
+         <span class="empty-title">No movies found!</span>
+         <p>Reset your filters to find something.</p>
+     </div>
 </div>
