@@ -2,6 +2,10 @@
     display: grid;
     grid-template-columns: repeat(6, 16%);
     grid-gap: 11px;
+    @media (min-width: 320px) and (max-width: 600px) {
+      grid-template-columns: repeat(2, 50%);
+      grid-gap: 6px;
+    }
 }
 .movie-card{
     width: 100%;
@@ -68,11 +72,17 @@
   .middle {
     transition: .5s ease;
     opacity: 0;
+    @media (min-width: 320px) and (max-width: 480px) {
+      opacity: 1;
+    }
     
   }
   
   .container:hover .image {
     opacity: 0.3;
+    @media (min-width: 320px) and (max-width: 480px) {
+      opacity: 1;
+    }
     
   }
   

@@ -65,6 +65,10 @@ $gray: #A0AFA0;
 .search-structure{
     display: grid;
     grid-template-columns: 94% 6%;
+    @media (min-width: 320px) and (max-width: 600px) {
+      grid-template-columns: auto;
+      grid-gap: 16px;
+    }
     .fas{
         margin-right: 10px;
     }

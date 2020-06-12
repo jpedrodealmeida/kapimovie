@@ -2,6 +2,12 @@
     margin-bottom: 74px;
     display: grid;
     grid-template-columns: 90% 10%;
+    @media (min-width: 320px) and (max-width: 600px) {
+        grid-template-columns: 80% 20%;
+        margin-bottom: 50px;
+        align-items: center;
+
+      }
 }
 .user-icon{
     font-size: 47px;
@@ -21,7 +27,17 @@
     grid-template-columns: 1fr 4fr;
     grid-gap: 8px;
     align-items: center;
+    @media (min-width: 320px) and (max-width: 600px) {
+        grid-template-columns: auto;
+        grid-gap: 0;
+        img{
+            width: 80%;
+        }
+      }
     .text-grid{
         align-self: center;
+        @media (min-width: 320px) and (max-width: 600px) {
+            justify-self: center;
+          }
     }
 }
