@@ -19,11 +19,21 @@ export class MovieListAllComponent implements OnInit {
      private _movieService: MovieService ) { }
 
   ngOnInit(): void {
-    this.getAllMovies()
+    let listExist = this._movieService.verifyListExist()
+    this.getAllMovies(listExist)
   }
 
-  private getAllMovies(){
-    this.movieList = this._movieService.getAllMovies();
+  private getAllMovies(listExist: boolean) {
+    if (!listExist) {
+      this._movieService.getMovies().subscribe(movies => {
+        if (movies)
+          this.movieList = this._movieService.configMovieObject(movies)
+      }, error => {
+        this._toastrService.error('Error ' + error)
+      });
+    }else{
+      this.movieList = this._movieService.getListExisting()
+    }
   }
 
   public favoriteMovie(movieFavorite){
