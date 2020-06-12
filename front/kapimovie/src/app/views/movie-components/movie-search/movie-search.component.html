@@ -1,6 +1,7 @@
 <div class="search-structure">
     <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Name" name="name" id='name'/>
+        <input type="input" class="form__field" placeholder="Name"
+         name="name" id='name' (input)='emitSearchValue($event)' />
         <label for="name" class="form__label">
             <i class="fas fa-search"></i>
             {{placeHolder}}

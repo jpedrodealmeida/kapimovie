@@ -6,7 +6,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MovieTopBarComponent } from './movie-top-bar/movie-top-bar.component';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { MovieListGenericComponent } from './movie-list-generic/movie-list-generic.component';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { MovieListGenericComponent } from './movie-list-generic/movie-list-gener
     MovieListGenericComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    Ng2SearchPipeModule
   ]
 })
 export class MovieModule { }

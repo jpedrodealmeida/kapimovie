@@ -9,9 +9,12 @@ import { Router } from '@angular/router';
 export class MovieListGenericComponent implements OnInit {
 
   @Input('movieList') movies
+  @Input('searchText') searchText
 
   @Output() like = new EventEmitter()
   @Output() moveDetails = new EventEmitter()
+
+
 
   constructor() { }
 

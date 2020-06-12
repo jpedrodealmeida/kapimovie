@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class MovieListFavoriteComponent implements OnInit {
 
   public favoriteList = []
+  public searchText = ''
   
   constructor(
     private _toastrService: ToastrService,
@@ -35,5 +36,9 @@ export class MovieListFavoriteComponent implements OnInit {
   public goToDetails(movie){
     this._movieService.setSelectedMovie(movie)
     this._router.navigate(['/movie'])
+  }
+
+  public setSearchText(value){
+    this.searchText = value
   }
 }

@@ -1,9 +1,9 @@
 <app-movie-top-bar></app-movie-top-bar>
 <div class="list-all-structure">
     <div class="search-input">
-        <app-movie-search></app-movie-search>
+        <app-movie-search (textSearch)="setSearchText($event)"></app-movie-search>
     </div>
     
-    <app-movie-list-generic  [movieList]='movieList' (moveDetails)='goToDetails($event)'
+    <app-movie-list-generic [searchText]="searchText" [movieList]='movieList' (moveDetails)='goToDetails($event)'
      (like)='favoriteMovie($event)'></app-movie-list-generic>
 </div>

@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class MovieListAllComponent implements OnInit {
 
   public movieList 
+  public searchText = ''
   
   constructor(
     private _router: Router,
@@ -41,6 +42,10 @@ export class MovieListAllComponent implements OnInit {
   public goToDetails(movie){
     this._movieService.setSelectedMovie(movie)
     this._router.navigate(['/movie'])
+  }
+
+  public setSearchText(value){
+    this.searchText = value
   }
 
 }

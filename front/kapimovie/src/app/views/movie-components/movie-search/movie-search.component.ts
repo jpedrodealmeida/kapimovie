@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-movie-search',
@@ -9,6 +10,8 @@ import { Router } from '@angular/router';
 export class MovieSearchComponent implements OnInit {
 
   @Input('buttonName') buttonName = 'Favorites'
+
+  @Output() textSearch = new EventEmitter()
 
   public placeHolder = 'Search movies, actors or genre'
 
@@ -24,6 +27,12 @@ export class MovieSearchComponent implements OnInit {
       this._router.navigate(['/movies-liked'])
     else if(this.buttonName == 'List all')
       this._router.navigate(['/movies'])
+  }
+
+  public emitSearchValue(event){
+    let value = event.target.value
+    this.textSearch.emit(value)
+    
   }
 
 }
