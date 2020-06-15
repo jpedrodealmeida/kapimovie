@@ -88,6 +88,7 @@ export class ProfileComponent implements OnInit {
   private saveUser(user: user){
     this._userService.updateUser(user)
     this._toastrService.success('User updated')
+    this._router.navigate(['/movies'])
   }
 
   public cancelButton(){
