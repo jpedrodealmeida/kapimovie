@@ -21,7 +21,7 @@ export class PublicService {
     })
   }
 
-  /**
+  /**@author Joao Pedro
    * Method for GET all movies 
    * 
    */ 
