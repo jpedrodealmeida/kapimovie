@@ -1,3 +1,6 @@
+$text-title-color: #55b25f;
+$icon-color: #A0AFA0;
+
 .top-area{
     margin-bottom: 74px;
     display: grid;
@@ -11,14 +14,14 @@
 }
 .user-icon{
     font-size: 47px;
-    color: #A0AFA0;
+    color: $icon-color;
     text-align: end;
     .fas{
         cursor: pointer;
     }
 }
 .text-movie{
-    color: #55b25f;
+    color: $text-title-color;
     font-size: 28px;
     margin: 0;
 }
