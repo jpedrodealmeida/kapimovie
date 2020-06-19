@@ -1,6 +1,6 @@
 $return-button-color: #A0AFA0;
-$all-content-text: #414641;
-$second-content-text: #637463;
+$all-content-text-color: #414641;
+$second-content-text-color: #637463;
 $red: #EB4B3C;
 
 .return-button{
@@ -49,7 +49,7 @@ $red: #EB4B3C;
 
 .title{
     font-size: 72px;
-    color: $all-content-text;
+    color: $all-content-text-color;
     font-weight: bold;
     @media (min-width: 320px) and (max-width: 600px){
         text-align: center;
@@ -61,13 +61,13 @@ $red: #EB4B3C;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     font-size: 26px;
-    color: $all-content-text;
+    color: $all-content-text-color;
     font-weight: 500;
     @media (min-width: 320px) and (max-width: 600px) {
         text-align: center;
       }
     i{
-        color: $second-content-text;
+        color: $second-content-text-color;
     }
     span{
         font-weight: bold;
@@ -104,13 +104,13 @@ $red: #EB4B3C;
     .text{
         cursor: pointer;
         font-size: 28px;
-        color: $second-content-text;
+        color: $second-content-text-color;
         font-weight: 600;
     }
 }
 .description{
     max-width: 600px;
-    color: $second-content-text;
+    color: $second-content-text-color;
     p{
         font-size: 28px;
     }
@@ -119,11 +119,11 @@ $red: #EB4B3C;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     .info-details{
-        color: $all-content-text;
+        color: $all-content-text-color;
         font-size: 18px;
     }
     label{
-        color: $second-content-text;
+        color: $second-content-text-color;
         font-size: 20px;
     }
 }
