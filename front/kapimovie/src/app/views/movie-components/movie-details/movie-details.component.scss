@@ -1,5 +1,10 @@
+$return-button-color: #A0AFA0;
+$all-content-text: #414641;
+$second-content-text: #637463;
+$red: #EB4B3C;
+
 .return-button{
-    color: #A0AFA0;
+    color: $return-button-color;
     font-size: 22px;
     margin-bottom: 23px;
     cursor: pointer;
@@ -44,7 +49,7 @@
 
 .title{
     font-size: 72px;
-    color: #414641;
+    color: $all-content-text;
     font-weight: bold;
     @media (min-width: 320px) and (max-width: 600px){
         text-align: center;
@@ -56,20 +61,20 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
     font-size: 26px;
-    color: #414641;
+    color: $all-content-text;
     font-weight: 500;
     @media (min-width: 320px) and (max-width: 600px) {
         text-align: center;
       }
     i{
-        color: #637463;
+        color: $second-content-text;
     }
     span{
         font-weight: bold;
         color: white;
         text-align: center;
-        background-color: #EB4B3C;
-        border: 2px solid #EB4B3C;
+        background-color: $red;
+        border: 2px solid $red;
         border-width: 6px 14px 6px 14px;
         border-radius: 5px;
         height: 40px;
@@ -83,7 +88,7 @@
         grid-template-columns: 14% 76%;
       }
     .heart-box{
-        border: 3px solid #EB4B3C;
+        border: 3px solid $red;
         border-radius: 5px;
         text-align: center;
         width: 42px;
@@ -92,20 +97,20 @@
         align-items: center;
         cursor: pointer;
         .fa-heart{
-            color: #EB4B3C;
+            color: $red;
             font-size: 27px;
         }
     }
     .text{
         cursor: pointer;
         font-size: 28px;
-        color: #637463;
+        color: $second-content-text;
         font-weight: 600;
     }
 }
 .description{
     max-width: 600px;
-    color: #637463;
+    color: $second-content-text;
     p{
         font-size: 28px;
     }
@@ -114,11 +119,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     .info-details{
-        color: #414641;
+        color: $all-content-text;
         font-size: 18px;
     }
     label{
-        color: #637463;
+        color: $second-content-text;
         font-size: 20px;
     }
 }
