@@ -1,3 +1,6 @@
+$text-title-color: #55b25f;
+$content-text-color: #637463;
+
 .top-area{
     margin-bottom: 127px;
     @media (min-width: 320px) and (max-width: 660px) {
@@ -5,7 +8,7 @@
     }
 }
 .text-movie{
-    color: #55b25f;
+    color: $text-title-color;
     font-size: 28px;
     margin: 0;
     cursor: pointer;
@@ -39,7 +42,7 @@
     .content-text{
         align-items: center;
         font-size: 28px;
-        color: #637463;
+        color: $content-text-color
         span{
             font-weight: bold;
         }
